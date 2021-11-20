@@ -4,6 +4,18 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+			crossorigin=""
+		/>
+		<script
+			defer
+			src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+			integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+			crossorigin=""
+		></script>
 		<link rel="stylesheet" href="stylesheets/main.css" />
 		<script defer src="app.js"></script>
 		<title>Frontend Mentor | IP Address Tracker</title>
@@ -13,8 +25,9 @@
 			<h1>IP Address Tracker</h1>
 
 			<div class="input-block">
-				<input type="text" value="192.212.174.101" />
+				<input type="text" placeholder="Search for any IP address or domain" />
 				<button type="button"></button>
+				<span>Enter a valid domain name or IP address</span>
 			</div>
 
 			<div class="data-display-block">
@@ -25,17 +38,17 @@
 				<div class="divider"></div>
 				<div class="data-result">
 					<h3>Location</h3>
-					<p id="location">Brooklyn, NY 10001</p>
+					<p id="location">South San Gabriel, US</p>
 				</div>
 				<div class="divider"></div>
 				<div class="data-result">
 					<h3>Timezone</h3>
-					<p id="timezone">UTC -05:00</p>
+					<p id="timezone">UTC -08:00</p>
 				</div>
 				<div class="divider"></div>
 				<div class="data-result">
 					<h3>ISP</h3>
-					<p id="isp">SpaceX Starlink</p>
+					<p id="isp">Southern California Edison</p>
 				</div>
 			</div>
 		</main>
@@ -44,6 +57,5 @@
 
 		<div id="map"></div>
 
-		<!-- Search for any IP address or domain -->
 	</body>
 </html>

@@ -1,8 +1,16 @@
+@media screen and (max-width: 350px) {
+	// avoids the map marker being overflowed by the .data-display-block in very small screens
+	#map {
+		height: calc(130vh - 300px);
+	}
+}
+
 @media screen and (min-width: 1200px) {
 	.data-display-block {
 		margin-top: 50px;
 		padding: 60px 40px;
 		flex-direction: row;
+		row-gap: 25px;
 
 		.data-result {
 			h3 {

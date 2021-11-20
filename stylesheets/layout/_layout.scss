@@ -24,7 +24,25 @@ main > h1 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	transition: 0.5s;
 	overflow: hidden; // hide button overflow border
+	position: relative;
+
+	span {
+		display: inline-block;
+		position: absolute;
+		bottom: 2px;
+		left: 20px;
+		color: var(--error);
+		transform: translateX(-50px); // brings to 0 when there is an error
+		opacity: 0; // brings to 1 when there is an error
+		font-size: 0.7rem;
+		transition: 0.5s;
+	}
+	.message-error {
+		transform: translateX(0) !important;
+		opacity: 1 !important;
+	}
 
 	&:hover {
 		cursor: pointer;
@@ -54,6 +72,39 @@ main > h1 {
 	}
 }
 
+.input-block-error {
+	outline: 3px solid var(--error);
+	outline-offset: 5px;
+	animation: shakeContainer 1s ease 0s 1 normal forwards;
+}
+@keyframes shakeContainer {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateX(-20px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateX(20px);
+	}
+
+	80% {
+		transform: translateX(10px);
+	}
+
+	90% {
+		transform: translateX(-10px);
+	}
+}
+
 .data-display-block {
 	margin-top: 20px;
 	padding: 20px;
@@ -63,7 +114,7 @@ main > h1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	row-gap: 25px;
+	row-gap: 10px;
 	position: relative;
 
 	.data-result {
@@ -98,7 +149,6 @@ main > h1 {
 	position: absolute;
 	top: 300px; // .bg height
 	width: 100%;
-	min-height: calc(100vh - 300px); // viewport height - .bg height
-	// background-color: black;
+	height: calc(100vh - 300px); // viewport height - .bg height
 	z-index: 1;
 }

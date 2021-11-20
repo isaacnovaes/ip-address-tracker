@@ -1,0 +1,26 @@
+@media screen and (min-width: 1200px) {
+	.data-display-block {
+		margin-top: 50px;
+		padding: 60px 40px;
+		flex-direction: row;
+
+		.data-result {
+			h3 {
+				font-size: 0.8rem;
+				font-weight: 500;
+				text-align: left;
+				margin-bottom: 10px;
+			}
+			p {
+				text-align: left;
+				font-size: 1.5rem;
+			}
+		}
+
+		.divider {
+			width: 0.5px;
+			height: 100px;
+			background-color: var(--dark-gray);
+		}
+	}
+}

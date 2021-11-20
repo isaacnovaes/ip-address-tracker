@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="stylesheets/main.css" />
+		<script defer src="app.js"></script>
+		<title>Frontend Mentor | IP Address Tracker</title>
+	</head>
+	<body>
+		<main>
+			<h1>IP Address Tracker</h1>
+
+			<div class="input-block">
+				<input type="text" value="192.212.174.101" />
+				<button type="button"></button>
+			</div>
+
+			<div class="data-display-block">
+				<div class="data-result">
+					<h3>IP Address</h3>
+					<p id="ip">192.212.174.101</p>
+				</div>
+				<div class="divider"></div>
+				<div class="data-result">
+					<h3>Location</h3>
+					<p id="location">Brooklyn, NY 10001</p>
+				</div>
+				<div class="divider"></div>
+				<div class="data-result">
+					<h3>Timezone</h3>
+					<p id="timezone">UTC -05:00</p>
+				</div>
+				<div class="divider"></div>
+				<div class="data-result">
+					<h3>ISP</h3>
+					<p id="isp">SpaceX Starlink</p>
+				</div>
+			</div>
+		</main>
+
+		<div class="bg"></div>
+
+		<div id="map"></div>
+
+		<!-- Search for any IP address or domain -->
+	</body>
+</html>
